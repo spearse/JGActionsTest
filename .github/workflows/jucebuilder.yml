@@ -31,4 +31,12 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
       run: xcodebuild -project TestProject/Builds/MacOSX/TestProject.xcodeproj
+
+   - name: Upload artifact
+   uses: actions/upload-artifact@v1.0.0
+    with:
+    # Artifact name
+    name: TestProject
+    # Directory containing files to upload
+    path: TestProject/Builds/MacOSX/Debug/TestProject.app
         
