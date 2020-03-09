@@ -39,7 +39,7 @@ jobs:
       run: brew install zip
       
     - name: Zip build
-      run:  zip -r release.zip TestProject/Builds/MacOSX/Debug/build/Debug/
+      run:  zip -r release.zip TestProject/Builds/MacOSX/build/Debug/
     
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
