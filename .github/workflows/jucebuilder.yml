@@ -39,8 +39,9 @@ jobs:
     - name: Copy app
       run: |
         mkdir Mac,
-        cp -rf TestProject/Builds/MacOSX/build/Debug/TestProject.app Mac,
-        ls Mac
+        cp -rf TestProject/Builds/MacOSX/build/Debug/TestProject.app Mac
+    - name: Check app copied
+      run: ls Mac
         
     - name: Download zip using homebrew
       run: brew install zip
