@@ -33,13 +33,25 @@ jobs:
       run: xcodebuild -project TestProject/Builds/MacOSX/TestProject.xcodeproj
     
     - name: Print Build output
-      run: ls -R TestProject/Builds
-      
+      run: ls -R TestProject/Builds  
+    
+    - name: Zip Release
+      uses: TheDoctor0/zip-release@v0.2.1
+      with:
+        # Filename for archive
+        filename: release.zip
+       # Base path for archive files
+        path: TestProject/Builds/MacOSX/Debug/build/Debug *
+        # List of excluded files/directories
+    
+    - name: Check Zip present
+      run:  ls TestProject/Builds/MacOSX/Debug/build/Debug
+    
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
         # Artifact name
         name: TestProject
         # Directory containing files to upload
-        path: TestProject/Builds/MacOSX/Debug/build/Debug/
+        path: TestProject/Builds/MacOSX/Debug/build/Debug/release.zip
         
