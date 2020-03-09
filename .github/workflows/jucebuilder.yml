@@ -38,5 +38,5 @@ jobs:
         # Artifact name
         name: TestProject
         # Directory containing files to upload
-        path: TestProject/Builds/MacOSX/Debug/build/Debug/TestProject.app
+        path: TestProject/Builds/MacOSX/Debug/build/Debug/
         
