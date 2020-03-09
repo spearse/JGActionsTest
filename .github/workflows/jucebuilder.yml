@@ -24,9 +24,9 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Directory
-      run: |
-        pwd,
-        ls
+      run: pwd
+    - name: Files
+      run: ls -a
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
