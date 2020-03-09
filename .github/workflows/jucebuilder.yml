@@ -35,11 +35,17 @@ jobs:
     - name: Print Build output
       run: ls -R TestProject/Builds  
     
+    
+    - name: Copy app
+      run: |
+        mkdir Mac,
+        cp -rf TestProject/Builds/MacOSX/build/Debug/TestProject.app Mac,
+        
     - name: Download zip using homebrew
       run: brew install zip
       
     - name: Zip build
-      run:  zip -r release.zip TestProject/Builds/MacOSX/build/Debug/
+      run:  zip -r release.zip Mac/TestProject.app
     
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
