@@ -40,6 +40,10 @@ jobs:
       run: |
         mkdir Mac,
         cp -rf TestProject/Builds/MacOSX/build/Debug/TestProject.app Mac
+    
+    - name: Check folders
+      run: ls
+      
     - name: Check app copied
       run: ls Mac
         
