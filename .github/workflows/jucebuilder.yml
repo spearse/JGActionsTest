@@ -40,7 +40,7 @@ jobs:
       run: |
         mkdir Mac,
         cp -rf TestProject/Builds/MacOSX/build/Debug/TestProject.app Mac,
-        ls Mac/
+        ls Mac
         
     - name: Download zip using homebrew
       run: brew install zip
