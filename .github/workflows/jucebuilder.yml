@@ -29,9 +29,12 @@ jobs:
       run: ls -a
 
     # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
+    - name: Xcode Build
       run: xcodebuild -project TestProject/Builds/MacOSX/TestProject.xcodeproj
     
+    - name: Print Build output
+      run: ls -R TestProject/Builds
+      
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
