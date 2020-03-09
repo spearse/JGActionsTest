@@ -61,7 +61,6 @@ jobs:
         # Directory containing files to upload
         path: release.zip
       
-    - name: Create Release
     - name: Checkout code
       uses: actions/checkout@master
     - name: Create Release
