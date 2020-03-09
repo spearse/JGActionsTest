@@ -39,7 +39,7 @@ jobs:
     - name: Copy app
       run: |
         mkdir Mac,
-        cp -rf TestProject/Builds/MacOSX/build/Debug/TestProject.app Mac
+        cp -rf TestProject/Builds/MacOSX/build/Debug/ Mac
     
     - name: Check folders
       run: ls
