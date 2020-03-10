@@ -92,7 +92,7 @@ jobs:
       run: ls TestProjectWindows/
       
     - name: zip 
-      run: 7z a TestProjectWindows output
+      run: 7z a  TestProject TestProjectWindows
     - name: Print Contents
       run: ls
       
