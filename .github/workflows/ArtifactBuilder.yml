@@ -10,12 +10,14 @@ on:
   pull_request:
     branches: [ master ]
 
+# This is a basic workflow to help you get started with Action
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: macos-latest 
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -23,11 +25,42 @@ jobs:
     - uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, world!
+    - name: Directory
+      run: pwd
+    - name: Files
+      run: ls -a
 
     # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
+    - name: Xcode Build
+      run: xcodebuild -project TestProject/Builds/MacOSX/TestProject.xcodeproj
+    
+    - name: Print Build output
+      run: ls -R TestProject/Builds  
+    
+    
+    - name: Copy app
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        mkdir Mac,
+        cp -rf TestProject/Builds/MacOSX/build/Debug/ Mac
+    
+    - name: Check folders
+      run: ls
+      
+    - name: Check app copied
+      run: ls Mac
+        
+    - name: Download zip using homebrew
+      run: brew install zip
+      
+    - name: Zip build
+      run:  zip -r release.zip Mac
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        # Artifact name
+        name: TestProject
+        # Directory containing files to upload
+        path: release.zip
+      
+   
