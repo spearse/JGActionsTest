@@ -59,7 +59,7 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         # Artifact name
-        name: TestProject
+        name: TestProject-Mac
         # Directory containing files to upload
         path: release.zip
         
@@ -93,4 +93,10 @@ jobs:
       
     - name: zip 
       run: 7z a TestProjectWindows
-    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        # Artifact name
+        name: TestProject-Windows
+        # Directory containing files to upload
+        path: TestProjectWindows.7z  
