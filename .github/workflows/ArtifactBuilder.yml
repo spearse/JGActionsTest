@@ -83,16 +83,16 @@ jobs:
       run: msbuild TestProject/Builds/VisualStudio2019/TestProject.sln
     
     - name: Make App Folder
-      run:  mkdir TestProjectWindows
+      run:  mkdir TestProjectBuild
     
     - name: Copy build files
-      run: cp -r TestProject/Builds/VisualStudio2019/x64/Debug/App/ TestProjectWindows  
+      run: cp -r TestProject/Builds/VisualStudio2019/x64/Debug/App/ TestProjectBuild  
     
     - name: Check copy
-      run: ls TestProjectWindows/
+      run: ls TestProjectBuild/
       
     - name: zip 
-      run: 7z a  TestProject TestProjectWindows
+      run: 7z a  TestProjectWindows TestProjectBuild
     - name: Print Contents
       run: ls
       
@@ -102,4 +102,4 @@ jobs:
         # Artifact name
         name: TestProject-Windows
         # Directory containing files to upload
-        path: TestProjectWindows
+        path: TestProjectWindows.7z
