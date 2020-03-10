@@ -90,4 +90,7 @@ jobs:
     
     - name: Check copy
       run: ls TestProjectWindows/
+      
+    - name: zip 
+      run: 7z a TestProjectWindows
     
