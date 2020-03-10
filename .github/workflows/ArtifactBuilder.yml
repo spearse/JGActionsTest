@@ -99,4 +99,4 @@ jobs:
         # Artifact name
         name: TestProject-Windows
         # Directory containing files to upload
-        path: TestProjectWindows.7z  
+        path: TestProjectWindows
