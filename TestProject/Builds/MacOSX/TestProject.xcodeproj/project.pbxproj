@@ -130,13 +130,6 @@
 			path = "../../JuceLibraryCode/modules/juce_audio_devices";
 			sourceTree = "SOURCE_ROOT";
 		};
-		150E0508E7CC5131A8AED5D1 = {
-			isa = PBXFileReference;
-			lastKnownFileType = text.plist.xml;
-			name = TestProject.entitlements;
-			path = TestProject.entitlements;
-			sourceTree = "SOURCE_ROOT";
-		};
 		1849AD98C0B0937E5EBA6F40 = {
 			isa = PBXFileReference;
 			explicitFileType = wrapper.application;
@@ -645,6 +638,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "TestProject";
+				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wreorder";
 				ZERO_LINK = NO;
 			};
@@ -690,6 +684,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PRODUCT_NAME = "TestProject";
+				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wreorder";
 				ZERO_LINK = NO;
 			};
