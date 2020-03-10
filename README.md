@@ -1,3 +1,3 @@
 # JGActionsTest
 
-![JuceBuilder](https://github.com/spearse/JGActionsTest/workflows/JuceBuilder/badge.svg?branch=master)
+![Artefact Builder](https://github.com/spearse/JGActionsTest/workflows/Artefact%20Builder/badge.svg?branch=master)
