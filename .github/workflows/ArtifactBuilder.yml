@@ -73,7 +73,7 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: zipping
-      run: 7zip
+      run: ls  'C:\Program Files\7-Zip'
     
 
     # Runs a single command using the runners shell
