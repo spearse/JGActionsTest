@@ -72,10 +72,6 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     
-    - name: zipping
-      run: 7z
-    
-
     # Runs a single command using the runners shell
     - name: Directory
       run: pwd
@@ -86,6 +82,11 @@ jobs:
     - name: VStudio Build
       run: msbuild TestProject/Builds/VisualStudio2019/TestProject.sln
     
-    - name: zipping
-      run: 7zip
+    - name: Copy build files
+      run: |
+        mkdir TestProjectWindows,
+        cp -rf TestProject/Builds/VisualStudio2019/x64/Debug/App/ TestProjectWindows  
+    
+    - name: Check copy
+      run: ls TestProjectWindows/
     
