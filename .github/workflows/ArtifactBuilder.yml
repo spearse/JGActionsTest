@@ -80,5 +80,5 @@ jobs:
       uses: microsoft/setup-msbuild@v1.0.0
       
     - name: VStudio Build
-      run: msbuild
+      run: msbuild TestProject/Builds/VisualStudio2019/TestProject.sln
     
