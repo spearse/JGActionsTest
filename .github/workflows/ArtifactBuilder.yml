@@ -86,7 +86,7 @@ jobs:
       run:  mkdir TestProjectWindows
     
     - name: Copy build files
-      run: cp -rf TestProject/Builds/VisualStudio2019/x64/Debug/App/ TestProjectWindows  
+      run: cp -r TestProject/Builds/VisualStudio2019/x64/Debug/App/ TestProjectWindows  
     
     - name: Check copy
       run: ls TestProjectWindows/
