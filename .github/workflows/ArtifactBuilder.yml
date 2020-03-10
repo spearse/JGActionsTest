@@ -82,10 +82,11 @@ jobs:
     - name: VStudio Build
       run: msbuild TestProject/Builds/VisualStudio2019/TestProject.sln
     
+    - name: Make App Folder
+      run:  mkdir TestProjectWindows
+    
     - name: Copy build files
-      run: |
-        mkdir TestProjectWindows,
-        cp -rf TestProject/Builds/VisualStudio2019/x64/Debug/App/ TestProjectWindows  
+      run: cp -rf TestProject/Builds/VisualStudio2019/x64/Debug/App/ TestProjectWindows  
     
     - name: Check copy
       run: ls TestProjectWindows/
